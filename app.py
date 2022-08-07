@@ -1,5 +1,4 @@
 from locale import format_string
-from xxlimited import Str
 from flask import Flask
 import logging
 import socket
