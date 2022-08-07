@@ -19,6 +19,7 @@ def help() -> str:
 
     Returns:
         A String of all commands that can be used
+
     """
 
     logging.info("all commands printed")
@@ -190,7 +191,7 @@ def region_info(country: str, region: str) -> dict:
         region: string of region name selected
 
     Returns:
-        region_info: A list of dictionaries of all info about the region (all sightings)
+        region_info: A dictionary of all info about the region (all sightings)
 
     """
 
@@ -217,7 +218,7 @@ def cities(country: str, region: str) -> str:
         region: string name of the region
 
     Returns:
-        cities: string of all of the cities
+        cities: string of all of the cities in said region, country
 
     """
 
@@ -247,7 +248,7 @@ def city_info(country: str, region: str, city: str) -> dict:
         city: string of city name selected
 
     Returns:
-        city_info: A list of dictionaries of all info about the city (all sightings)
+        city_info: A dictionary of all info about the city (all sightings)
 
     """
 
