@@ -83,7 +83,7 @@ def epochs() -> str:
     return epochs
 
  
-@app.route('/epochs/<epochs>', methods=['GET'])
+@app.route('/epochs/<epoch>', methods=['GET'])
 def epoch_info(epoch: str) -> dict:
 
     """
@@ -229,7 +229,7 @@ def cities(country: str, region: str) -> str:
         if (sight_data['visible_passes']['visible_pass'][i]['country'] == country):
             if sight_data['visible_passes']['visible_pass'][i]['region'] == region:
                 if sight_data['visible_passes']['visible_pass'][i]['city'] not in cities:
-                    cities += (sight_data['visible_passes']['visible_pass'][i]['region']) + "\n"
+                    cities += (sight_data['visible_passes']['visible_pass'][i]['city']) + "\n"
 
     return cities
 
