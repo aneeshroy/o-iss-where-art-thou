@@ -129,7 +129,7 @@ def countries() -> str:
 
 
 @app.route('/countries/<country>', methods=['GET'])
-def country_info(country: str) -> list:
+def country_info(country: str) -> dict:
 
     """
     Returns all the data about a specific country from sighting data
@@ -138,7 +138,7 @@ def country_info(country: str) -> list:
         country: string of country name selected
 
     Returns:
-        country_info: A list of dictionaries of all info about the country (all sightings)
+        country_info: A dictionary of all info about the country (all sightings)
 
     """
 
@@ -150,7 +150,7 @@ def country_info(country: str) -> list:
         if (sight_data['visible_passes']['visible_pass'][i]['country'] == country):
             country_info.append((sight_data['visible_passes']['visible_pass'][i]))
 
-    return country_info
+    return {country:country_info}
 
 
 @app.route('/countries/<country>/regions', methods=['GET'])
@@ -203,7 +203,7 @@ def region_info(country: str, region: str) -> dict:
             if (sight_data['visible_passes']['visible_pass'][i]['region'] == region):
                 region_info.append((sight_data['visible_passes']['visible_pass'][i]))
 
-    return region_info
+    return {region:region_info}
 
 
 @app.route('/countries/<country>/regions/<region>/cities', methods=['GET'])
@@ -236,7 +236,7 @@ def cities(country: str, region: str) -> str:
 
 
 @app.route('/countries/<country>/regions/<region>/cities/<city>', methods=['GET'])
-def city_info(country: str, region: str, city: str) -> list:
+def city_info(country: str, region: str, city: str) -> dict:
 
     """
     Returns all the data about a specific city from sighting data
@@ -261,7 +261,7 @@ def city_info(country: str, region: str, city: str) -> list:
                 if (sight_data['visible_passes']['visible_pass'][i]['city'] == city):
                     city_info.append((sight_data['visible_passes']['visible_pass'][i]))
 
-    return city_info
+    return {city:city_info}
 
 
 if __name__ == '__main__': 

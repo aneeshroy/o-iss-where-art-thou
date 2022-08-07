@@ -19,16 +19,16 @@ def test_countries():
     assert isinstance(countries(), str) == True
 
 def test_country_info():
-    assert isinstance(country_info("United_States"), list) == True
+    assert isinstance(country_info("United_States"), dict) == True
 
 def test_regions():
     assert isinstance(regions("United_States"), str) == True
 
 def test_region_info():
-    assert isinstance(region_info("United_States", "Iowa"), list) == True
+    assert isinstance(region_info("United_States", "Iowa"), dict) == True
 
 def test_cities():
     assert isinstance(cities("United_States", "Iowa"), str) == True
 
 def test_city_info():
-    assert isinstance(city_info("United_States", "Iowa", "Decorah"), list) == True
+    assert isinstance(city_info("United_States", "Iowa", "Decorah"), dict) == True
