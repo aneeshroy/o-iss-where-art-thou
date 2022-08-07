@@ -112,7 +112,7 @@ curl localhost:5025/epochs/2022-057T11:32:56.869Z
 }
 ```
 
-##Citations
+## Citations
 
 Goodwin, S. (n.d.). ISS_COORDS_2022-02-13. NASA. https://nasa-public-data.s3.amazonaws.com/iss-coords/2022-02-13/ISS_OEM/ISS.OEM_J2K_EPH.xml Retrieved August 3, 2022, from https://data.nasa.gov/Space-Science/ISS_COORDS_2022-02-13/r6u8-bhhq
 
